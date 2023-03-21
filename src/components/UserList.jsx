@@ -24,7 +24,7 @@ const UserList = ({ userList, setForm, selectUser, getUsers, getWarning }) => {
       <div className="flex w-full flex-row flex-wrap gap-8 justify-evenly px-4 py-4">
         {orderList.map((user) => (
           <div
-            className="flex flex-col items-center justify-between p-4 flex-wrap w-80 h-60 bg-white/20 shadow-lg shadow-black rounded-lg my-10 gap-0 sm:h-72 sm:gap-2 md:w-80 lg:w-80"
+            className="flex flex-col items-center justify-between p-4 flex-wrap w-80 h-60 bg-white/20 shadow-lg shadow-black rounded-lg my-10 gap-0 sm:h-72 sm:gap-2 md:w-80 lg:w-80 hover:shadow-xl hover:shadow-white"
             key={user.id}
           >
             <h4 className="w-full text-center py-2 border-b-2 border-black font-black shadow-lg shadow-black rounded-lg underline underline-offset-2">
@@ -48,7 +48,7 @@ const UserList = ({ userList, setForm, selectUser, getUsers, getWarning }) => {
             </div>
             <div className="flex items-center justify-center flex-row gap-20 rounded-md sm:gap-24 sm:mt-2">
               <div
-                className="bg-blue-500 text-white flex items-center justify-center w-10 h-10 border-2 border-black rounded-md shadow-md shadow-black hover:bg-blue-700 hover:transform hover:scale-110 hover:text-black"
+                className="bg-blue-500 text-white flex items-center justify-center w-10 h-10 border-2 border-black rounded-md shadow-md shadow-black hover:bg-blue-700  hover:transform hover:scale-110 hover:text-black"
                 onClick={() => selectUser(user)}
               >
                 <i className="bx bxs-edit-alt bx-sm"></i>
