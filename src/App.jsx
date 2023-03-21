@@ -48,7 +48,7 @@ const App = () => {
   };
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-screen">
       {form && (
         <UserForm
           setForm={setForm}
