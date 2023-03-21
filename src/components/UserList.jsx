@@ -5,7 +5,7 @@ const UserList = ({ userList, setForm, selectUser, getUsers, getWarning }) => {
   const orderList = userList.sort((a, b) => a.first_name.localeCompare(b.first_name));
 
   return (
-    <div className="w-full">
+    <div className="w-full h-4/5">
       <div className="w-full h-52 flex flex-row flex-wrap items-center justify-around bg-white/30 shadow-lg shadow-black">
         <h1 className="w-full text-center text-4xl font-bold text-black">
           Listado de Usuarios
@@ -21,7 +21,7 @@ const UserList = ({ userList, setForm, selectUser, getUsers, getWarning }) => {
           <span className="text-2xl mr-1">+</span>Nuevo Usuario
         </button>
       </div>
-      <div className="flex w-full flex-row flex-wrap gap-8 justify-evenly px-4 py-4 sm:w-72 sm:h-96 sm:flex-col sm:gap-16 sm:justify-center sm:px-2 sm:py-2 md:items-center md:justify-center md:ml-6">
+      <div className="flex w-full flex-row flex-wrap gap-8 justify-evenly px-4 py-4 sm:w-72 sm:h-96 sm:flex-col sm:gap-16 sm:justify-center sm:px-2 sm:py-2 md:items-center md:justify-center md:ml-6 mb-12">
         {orderList.map((user) => (
           <div
             className=" flex flex-col items-center justify-between p-4 flex-wrap w-full h-60 bg-white/20 shadow-lg shadow-black rounded-lg my-10 gap-0 sm:h-72 sm:gap-2 md:w-80 lg:w-4/5"
