@@ -15,7 +15,7 @@ const UserList = ({ userList, setForm, selectUser, getUsers, getWarning }) => {
           {userList.length}
         </p>
         <button
-          className="w-36 h-10 flex items-center justify-center bg-blue-600 text-white shadow-lg shadow-black hover:bg-slate-200 hover:transform hover:scale-110 hover:text-blue-800 cursor-pointer font-bold rounded-lg"
+          className="w-36 h-10 flex items-center justify-center bg-blue-500 text-white shadow-lg shadow-black hover:bg-blue-700 hover:transform hover:scale-110 hover:text-black cursor-pointer font-bold rounded-lg border-2 border-black"
           onClick={() => setForm(true)}
         >
           <span className="text-2xl mr-1">+</span>Nuevo Usuario
@@ -35,7 +35,7 @@ const UserList = ({ userList, setForm, selectUser, getUsers, getWarning }) => {
             className=" flex flex-row items-center justify-between p-4 flex-wrap w-72 h-60 bg-white/20 shadow-lg shadow-black rounded-lg"
             key={user.id}
           >
-            <h4 className="w-full text-center pb-2 border-b-2 border-black font-black">
+            <h4 className="w-full text-center pb-2 border-b-2 border-black font-black shadow-lg shadow-black rounded-lg">
               {user.first_name}, {user.last_name}
             </h4>
             <div className="">
@@ -56,13 +56,13 @@ const UserList = ({ userList, setForm, selectUser, getUsers, getWarning }) => {
             </div>
             <div className="flex items-center justify-center flex-row gap-4 rounded-md sm:flex-col">
               <div
-                className="bg-blue-700 flex items-center justify-center flex-col gap-6 w-10 h-10 border-2 border-black rounded-md shadow-md shadow-black"
+                className="bg-blue-500 text-white flex items-center justify-center flex-col gap-6 w-10 h-10 border-2 border-black rounded-md shadow-md shadow-black hover:bg-blue-700 hover:transform hover:scale-110 hover:text-black"
                 onClick={() => selectUser(user)}
               >
                 <i className="bx bxs-edit-alt bx-sm cursor-pointer"></i>
               </div>
               <div
-                className="bg-red-700 flex items-center justify-center w-10 h-10 border-2 border-black rounded-md shadow-md shadow-black"
+                className="bg-red-500 text-white flex items-center justify-center w-10 h-10 border-2 border-black rounded-md shadow-md shadow-black hover:bg-red-700 hover:transform hover:scale-110 hover:text-black"
                 onClick={() => getWarning(user)}
               >
                 <i className="bx bx-trash bx-sm cursor-pointer"></i>

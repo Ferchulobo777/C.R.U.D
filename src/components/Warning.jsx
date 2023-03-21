@@ -14,13 +14,13 @@ const Warning = ({ userToDelete, cancelDelete, deleteUser }) => {
           Atencion esta accion es permanente
         </p>
         <button
-          className="w-28 h-8 bg-red-500 mr-4 font-bold text-white hover:bg-red-700 hover:transform hover:scale-110 rounded-lg shadow-lg shadow-black"
+          className="w-28 h-8 bg-red-500 mr-4 font-bold text-white hover:bg-red-700 hover:transform hover:scale-110 rounded-lg shadow-lg shadow-black hover:text-black"
           onClick={() => deleteUser(userToDelete)}
         >
           Eliminar
         </button>
         <button
-          className="w-28 h-8 bg-blue-500 ml-4 font-bold text-white hover:bg-blue-700 hover:transform hover:scale-110 rounded-lg shadow-lg shadow-black"
+          className="w-28 h-8 bg-blue-500 ml-4 font-bold text-white hover:bg-blue-700 hover:transform hover:scale-110 rounded-lg shadow-lg shadow-black hover:text-black"
           onClick={() => cancelDelete()}
         >
           Cancelar
