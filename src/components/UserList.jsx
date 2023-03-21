@@ -48,7 +48,7 @@ const UserList = ({ userList, setForm, selectUser, getUsers, getWarning }) => {
             </div>
             <div className="flex items-center justify-center flex-row gap-20 rounded-md sm:gap-24 sm:mt-2">
               <div
-                className="bg-blue-500 text-white flex items-center justify-center w-10 h-10 border-2 border-black rounded-md shadow-md shadow-black hover:bg-blue-700 hover:transform hover:scale-110 hover:text-black"
+                className="bg-blue-600 text-white flex items-center justify-center w-10 h-10 border-2 border-black rounded-md shadow-md shadow-black hover:bg-blue-700 hover:transform hover:scale-110 hover:text-black"
                 onClick={() => selectUser(user)}
               >
                 <i className="bx bxs-edit-alt bx-sm"></i>
