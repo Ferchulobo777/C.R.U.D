@@ -63,7 +63,7 @@ const UserForm = ({ setForm, getUsers, userSelected, setUserSelected }) => {
           <div className="flex flex-row gap-2 items-center justify-center w-full">
             <i className="bx bxs-user text-xl"></i>
             <input
-              className="block w-4/5 placeholder:text-center shadow-md shadow-black rounded-lg"
+              className="block w-4/5 placeholder:text-center shadow-md shadow-black rounded-lg px-2"
               type="text"
               id="firs_name"
               placeholder="Nombre"
@@ -73,7 +73,7 @@ const UserForm = ({ setForm, getUsers, userSelected, setUserSelected }) => {
           <div className="flex flex-row gap-2 items-center justify-center w-full">
             <i className="bx bxs-user text-xl"></i>
             <input
-              className="block w-4/5 placeholder:text-center shadow-md shadow-black rounded-lg"
+              className="block w-4/5 placeholder:text-center shadow-md shadow-black rounded-lg px-2"
               type="text"
               id="last_name"
               placeholder="Apellido"
@@ -83,7 +83,7 @@ const UserForm = ({ setForm, getUsers, userSelected, setUserSelected }) => {
           <div className="flex flex-row gap-2 items-center justify-center w-full">
             <i className="bx bxs-envelope text-xl"></i>
             <input
-              className="block w-4/5 placeholder:text-center shadow-md shadow-black rounded-lg"
+              className="block w-4/5 placeholder:text-center shadow-md shadow-black rounded-lg px-2"
               type="email"
               id="email"
               placeholder="E-mail"
@@ -98,7 +98,7 @@ const UserForm = ({ setForm, getUsers, userSelected, setUserSelected }) => {
               onClick={togglePasswordVisibility}
             ></i>
             <input
-              className="block w-4/5 placeholder:text-center shadow-md shadow-black rounded-lg"
+              className="block w-4/5 placeholder:text-center shadow-md shadow-black rounded-lg px-2"
               type={showPassword ? 'text' : 'password'}
               id="password"
               placeholder="Password"
@@ -108,7 +108,7 @@ const UserForm = ({ setForm, getUsers, userSelected, setUserSelected }) => {
           <div className="flex flex-row gap-2 items-center justify-center w-full">
             <i className="bx bxs-gift text-xl"></i>
             <input
-              className="block w-4/5 text-center shadow-md shadow-black rounded-lg"
+              className="block px-2 w-4/5 text-center shadow-md shadow-black rounded-lg"
               type="date"
               id="birthday"
               placeholder="Fecha de Nacimiento"
