@@ -21,10 +21,10 @@ const UserList = ({ userList, setForm, selectUser, getUsers, getWarning }) => {
           <span className="text-2xl mr-1">+</span>Nuevo Usuario
         </button>
       </div>
-      <div className="flex w-full flex-row flex-wrap gap-8 justify-evenly px-4 py-4 sm:w-72 sm:h-96 sm:flex-col sm:gap-16 sm:justify-center sm:px-2 sm:py-2 md:items-center md:justify-center md:ml-6 mb-12">
+      <div className="flex w-full flex-row flex-wrap gap-8 justify-evenly px-4 py-4">
         {orderList.map((user) => (
           <div
-            className=" flex flex-col items-center justify-between p-4 flex-wrap w-full h-60 bg-white/20 shadow-lg shadow-black rounded-lg my-10 gap-0 sm:h-72 sm:gap-2 md:w-80 lg:w-4/5"
+            className="flex flex-col items-center justify-between p-4 flex-wrap w-80 h-60 bg-white/20 shadow-lg shadow-black rounded-lg my-10 gap-0 sm:h-72 sm:gap-2 md:w-80 lg:w-80"
             key={user.id}
           >
             <h4 className="w-full text-center py-2 border-b-2 border-black font-black shadow-lg shadow-black rounded-lg underline underline-offset-2">
