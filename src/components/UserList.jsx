@@ -5,8 +5,8 @@ const UserList = ({ userList, setForm, selectUser, getUsers, getWarning }) => {
   const orderList = userList.sort((a, b) => a.first_name.localeCompare(b.first_name));
 
   return (
-    <div className="w-full ">
-      <div className="w-full h-52 flex flex-row flex-wrap items-center justify-around bg-white/30 shadow-lg shadow-black">
+    <div className="w-full">
+      <div className="w-full h-28 flex flex-row flex-wrap items-center justify-around bg-white/30 shadow-lg shadow-black">
         <h1 className="w-full text-center text-4xl font-bold text-black">
           Listado de Usuarios
         </h1>

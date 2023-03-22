@@ -48,7 +48,7 @@ const App = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col justify-around">
       {form && (
         <UserForm
           setForm={setForm}
