@@ -50,7 +50,7 @@ const UserForm = ({ setForm, getUsers, userSelected, setUserSelected }) => {
     <div className="w-screen h-screen fixed top-0 left-0 bg-black/80 flex items-center justify-center">
       <div className="w-full h-3/5 mx-6 bg-slate-300/60 rounded-lg p-8 shadow-lg shadow-black text-center flex flex-col sm:w-4/5 sm:h-4/5 md:w-3/5 md:h-4/5 lg:w-2/4 lg:h-4/5 xl:h-4/5 xl:w-2/4 2xl:w-2/4 2xl:h-4/6">
         <button
-          className="flex items-center justify-center absolute top-40 right-5 rounded-full w-8 H-8 bg-red-700 mr-2 mt-2 text-xl font-bold shadow-lg shadow-black cursor-pointer text-white border-2 border-white hover:cursor-pointer hover:transform hover:scale-125 hover:text-black sm:top-12 sm:right-16 md:top-12 md:right-40 lg:top-12 lg:right-64 xl:top-12 xl:right-80 2xl:right-96 2xl:top-24"
+          className="flex items-center justify-center absolute top-40 right-5 rounded-full w-8 H-8 bg-red-700 mr-2 mt-2 text-xl font-bold shadow-lg shadow-black cursor-pointer text-black border-2 border-black hover:cursor-pointer hover:transform hover:scale-125 hover:text-white hover:border-white hover:shadow-sm hover:shadow-white sm:top-12 sm:right-16 md:top-12 md:right-40 lg:top-12 lg:right-64 xl:top-12 xl:right-80 2xl:right-96 2xl:top-24"
           onClick={() => closeForm()}
         >
           X
@@ -116,7 +116,7 @@ const UserForm = ({ setForm, getUsers, userSelected, setUserSelected }) => {
             />
           </div>
           <button
-            className="bg-blue-500 text-white w-40 h-10 rounded-md font-bold hover:bg-blue-700 hover:text-black hover:transform hover:scale-105 shadow-lg shadow-black 2xl:mt-6"
+            className="bg-blue-500 text-black border-2 border-black w-40 h-10 rounded-md font-bold hover:bg-blue-700 hover:text-white hover:border-white hover:transform hover:scale-105 shadow-lg shadow-black 2xl:mt-6 hover:shadow-sm hover:shadow-white"
             type="submit"
           >
             {userSelected ? 'Actualizar' : 'Crear Usuario'}

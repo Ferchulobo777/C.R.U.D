@@ -15,7 +15,7 @@ const UserList = ({ userList, setForm, selectUser, getUsers, getWarning }) => {
           {userList.length}
         </p>
         <button
-          className="w-36 h-10 flex items-center justify-center bg-blue-500 text-white shadow-lg shadow-black hover:bg-blue-700 hover:transform hover:scale-110 hover:text-black font-bold rounded-lg border-2 border-black"
+          className="w-36 h-10 flex items-center justify-center bg-blue-500 text-black shadow-lg shadow-black hover:bg-blue-700 hover:transform hover:scale-110 hover:text-white hover:border-white font-bold rounded-lg border-2 border-black"
           onClick={() => setForm(true)}
         >
           <span className="text-2xl mr-1">+</span>Nuevo Usuario
@@ -48,13 +48,13 @@ const UserList = ({ userList, setForm, selectUser, getUsers, getWarning }) => {
             </div>
             <div className="flex items-center justify-center flex-row gap-20 rounded-md sm:gap-24 sm:mt-2">
               <div
-                className="bg-blue-500 text-white flex items-center justify-center w-10 h-10 border-2 border-black rounded-md shadow-md shadow-black hover:bg-blue-700  hover:transform hover:scale-110 hover:text-black"
+                className="bg-blue-500 text-black flex items-center justify-center w-10 h-10 border-2 border-black rounded-md shadow-md shadow-black hover:bg-blue-700  hover:transform hover:scale-110 hover:text-white hover:border-white"
                 onClick={() => selectUser(user)}
               >
                 <i className="bx bxs-edit-alt bx-sm"></i>
               </div>
               <div
-                className="bg-red-500 text-white flex items-center justify-center w-10 h-10 border-2 border-black rounded-md shadow-md shadow-black hover:bg-red-700 hover:transform hover:scale-110 hover:text-black"
+                className="bg-red-500 text-black flex items-center justify-center w-10 h-10 border-2 border-black rounded-md shadow-md shadow-black hover:bg-red-700 hover:transform hover:scale-110 hover:text-white hover:border-white"
                 onClick={() => getWarning(user)}
               >
                 <i className="bx bx-trash bx-sm"></i>
