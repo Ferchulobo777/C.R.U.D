@@ -18,4 +18,6 @@ body{
     background-size: cover;
     background-position:center;
     background-repeat: no-repeat;
+    position: relative;
+    padding-bottom: 41em;
 }
