@@ -48,7 +48,7 @@ const UserForm = ({ setForm, getUsers, userSelected, setUserSelected }) => {
 
   return (
     <div className="w-full h-screen fixed top-0 left-0 bottom-0 bg-black/80 flex items-center justify-center">
-      <div className="w-4/5 h-4/5 mx-6 fixed bg-slate-300/80 rounded-lg p-8 shadow-lg shadow-black text-center flex flex-col sm:w-4/5 sm:h-4/5 md:w-3/5 md:h-4/5 lg:w-2/4 lg:h-4/5 xl:h-4/5 xl:w-2/4 2xl:w-2/4 2xl:h-4/6">
+      <div className="w-4/5 h-1/2 mx-6 fixed bg-slate-300/80 rounded-lg p-8 shadow-lg shadow-black text-center flex flex-col sm:w-4/5 sm:h-4/5 md:w-3/5 md:h-4/5 lg:w-2/4 lg:h-4/5 xl:h-4/5 xl:w-2/4 2xl:w-2/4 2xl:h-4/6">
         <button
           className="flex items-center justify-center absolute top-2 right-0 rounded-full w-8 H-8 bg-red-700 mr-2 mt-2 text-xl font-bold shadow-lg shadow-black cursor-pointer text-black border-2 border-black hover:cursor-pointer hover:transform hover:scale-125 hover:text-white hover:border-white hover:shadow-sm hover:shadow-white sm:top-2 sm:right-0 md:top-0 md:right-0 lg:top-0 lg:right-0 xl:top-0 xl:right-0 2xl:right-0 2xl:top-0"
           onClick={() => closeForm()}
