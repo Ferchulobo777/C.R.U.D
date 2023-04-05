@@ -4,6 +4,9 @@ import UserList from './components/UserList';
 import UserForm from './components/UserForm';
 import Warning from './components/Warning';
 import Footer from './components/Footer';
+import { toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const [userList, setUserList] = useState([]);
@@ -12,10 +15,13 @@ const App = () => {
   const [warning, setWarning] = useState(false);
   const [userToDelete, setUserToDelete] = useState(null);
 
-  const getUsers = () => {
-    axios
-      .get(`https://users-crud.academlo.tech/users/`)
-      .then((res) => setUserList(res.data));
+  const getUsers = async () => {
+    try {
+      const res = await axios.get(`https://users-crud.academlo.tech/users/`);
+      setUserList(res.data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   useEffect(() => {
@@ -41,9 +47,13 @@ const App = () => {
     axios
       .delete(`https://users-crud.academlo.tech/users/${userToDelete?.id}`)
       .then(() => {
+        toast.success('Usuario eliminado exitosamente!');
         getUsers();
         setWarning(false);
         setUserToDelete(null);
+      })
+      .catch((error) => {
+        toast.error('Error al eliminar el usuario. Por favor inténtalo de nuevo.');
       });
   };
 
@@ -72,6 +82,7 @@ const App = () => {
         />
       )}
       <Footer />
+      <ToastContainer autoClose={2000} />
     </div>
   );
 };

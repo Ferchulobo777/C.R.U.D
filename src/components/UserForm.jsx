@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const UserForm = ({ setForm, getUsers, userSelected, setUserSelected }) => {
   const { handleSubmit, register, reset } = useForm();
@@ -20,19 +21,24 @@ const UserForm = ({ setForm, getUsers, userSelected, setUserSelected }) => {
     }
   }, [userSelected]);
 
-  const submit = (data) => {
-    if (userSelected) {
-      axios
-        .put(`https://users-crud.academlo.tech/users/${userSelected.id}/`, data)
-        .then(() => {
-          getUsers();
-          closeForm();
-        });
-    } else {
-      axios.post(`https://users-crud.academlo.tech/users/`, data).then(() => {
+  const submit = async (data) => {
+    try {
+      if (userSelected) {
+        await axios.put(
+          `https://users-crud.academlo.tech/users/${userSelected.id}/`,
+          data,
+        );
+        toast.success('Usuario actualizado exitosamente!');
         getUsers();
         closeForm();
-      });
+      } else {
+        await axios.post(`https://users-crud.academlo.tech/users/`, data);
+        toast.success('Usuario creado exitosamente!');
+        getUsers();
+        closeForm();
+      }
+    } catch (error) {
+      toast.error('Hubo un error al realizar la operacion intente de nuevo!');
     }
   };
   const closeForm = () => {
