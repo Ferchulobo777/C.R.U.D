@@ -25,14 +25,14 @@ const UserForm = ({ setForm, getUsers, userSelected, setUserSelected }) => {
     try {
       if (userSelected) {
         await axios.put(
-          `https://users-crud.academlo.tech/users/${userSelected.id}/`,
+          `https://users-crud-tsqd.onrender.com/users/${userSelected.id}/`,
           data,
         );
         toast.success('Usuario actualizado exitosamente!');
         getUsers();
         closeForm();
       } else {
-        await axios.post(`https://users-crud.academlo.tech/users/`, data);
+        await axios.post(`https://users-crud-tsqd.onrender.com/users`, data);
         toast.success('Usuario creado exitosamente!');
         getUsers();
         closeForm();
