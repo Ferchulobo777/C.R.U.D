@@ -17,7 +17,7 @@ const App = () => {
 
   const getUsers = async () => {
     try {
-      const res = await axios.get(`https://users-crud-tsqd.onrender.com/users`);
+      const res = await axios.get(`http://users-crud.academlo.tech/users`);
       setUserList(res.data);
     } catch (error) {
       console.error(error);
@@ -45,7 +45,7 @@ const App = () => {
 
   const deleteUser = (userToDelete) => {
     axios
-      .delete(`https://users-crud-tsqd.onrender.com/users/${userToDelete?.id}`)
+      .delete(`http://users-crud.academlo.tech/users/${userToDelete?.id}`)
       .then(() => {
         toast.success('Usuario eliminado exitosamente!');
         getUsers();
